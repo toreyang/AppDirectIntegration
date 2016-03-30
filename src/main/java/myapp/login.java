@@ -51,7 +51,7 @@ public class login extends HttpServlet {
         //this.authRequest(identifier, req, resp);
     }
 
-    
+
     public String authRequest(String userSuppliedString,
                               HttpServletRequest httpReq, HttpServletResponse httpResp)
             throws IOException {

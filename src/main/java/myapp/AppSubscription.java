@@ -5,7 +5,6 @@ import java.util.*;
 public class  AppSubscription implements java.io.Serializable{
     private String creator;
     private String EditionCode;
-    private String PricingDuration;
 
     public Set<String> getAssignees() {
         return assignees;
@@ -21,9 +20,6 @@ public class  AppSubscription implements java.io.Serializable{
         return EditionCode;
     }
 
-    public String getPricingDuration() {
-        return PricingDuration;
-    }
 
     public void setCreator(String creator) {
         this.creator = creator;
@@ -34,9 +30,6 @@ public class  AppSubscription implements java.io.Serializable{
         EditionCode = editionCode;
     }
 
-    public void setPricingDuration(String pricingDuration) {
-        PricingDuration = pricingDuration;
-    }
 
     public void addAssignee(String assignee){
         assignees.add(assignee);
