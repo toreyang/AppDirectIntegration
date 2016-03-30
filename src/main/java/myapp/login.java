@@ -51,7 +51,7 @@ public class login extends HttpServlet {
         //this.authRequest(identifier, req, resp);
     }
 
-    // --- placing the authentication request ---
+    
     public String authRequest(String userSuppliedString,
                               HttpServletRequest httpReq, HttpServletResponse httpResp)
             throws IOException {
@@ -65,14 +65,15 @@ public class login extends HttpServlet {
             String url = manager.getAuthenticationUrl(endpoint, association);
             httpResp.sendRedirect(url);
 
-        } catch (Exception e) {//catch (OpenIDException e) {
-            httpResp.getWriter().println("Exception:" + e.getMessage());
+        } catch (Exception e) {
             // present error to the user
+            httpResp.getWriter().println("Exception:" + e.getMessage());
+
         }
         return null;
     }
 
-    // --- processing the authentication response ---
+
 
 }
 
